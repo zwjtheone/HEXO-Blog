@@ -6,7 +6,9 @@
 favicon: http://resource.zwjay.cn/jekyll/img/favicon.png
 
 # Set default keywords (Use a comma to separate)
-keywords: "前端,js,jquery,javascript,html5,cordova,phonegap,react,reactNative,reactjs,ionic,angular,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,webpack,github,meiminjun"
+description: "前端 | 赵伟杰，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Zwj赵伟杰 的个人博客，与你一起发现更大的世界。"
+signature: "前端 | 赵伟杰，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Zwj赵伟杰 的个人博客，与你一起发现更大的世界。"
+keyword: "赵伟杰, zwj赵伟杰, zwj, 赵伟杰的博客, zwj Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, zwjtheone, zwjay, zwj47, 黄思棋的男朋友"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -140,7 +142,7 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
   Codeing: https://coding.net/u/zwjay
   GitHub : https://github.com/zwj47
@@ -162,7 +164,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: http://img.zwjay.cn/gougou-avatar.png
 
 
 # Table Of Contents in the Sidebar
