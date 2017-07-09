@@ -1,0 +1,16 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/ 
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: http://meiminjun.github.io/sitemap.xml
+Sitemap: http://meiminjun.github.io/baidusitemap.xml
+Sitemap: https://meiminjun.github.io/sitemap.xml
+Sitemap: https://meiminjun.github.io/baidusitemap.xml

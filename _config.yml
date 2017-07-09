@@ -1,0 +1,104 @@
+# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: ZWJ'Blog
+subtitle: 凡悟道，必踩坑
+description: 前端 | 赵伟杰，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Zwj赵伟杰 的个人博客，与你一起发现更大的世界。
+author: Mr.Jay
+language: zh-Hans
+timezone:
+email: zwjtheone@vip.qq.com
+keywords: "赵伟杰, zwj赵伟杰, zwj, 赵伟杰的博客, zwj Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, zwjtheone, zwjay, zwj47, 黄思棋的男朋友"
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://www.zwjay.cn/
+root: /
+# permalink: :year/:month/:day/:title/
+permalink: :title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: true #显示草稿
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+#index_generator:
+#  per_page: 8
+
+#archive_generator:
+#  per_page: 8
+#  yearly: true
+#  monthly: true
+
+#tag_generator:
+#  per_page: 8
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+theme: next
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/zwj47/zwj47.github.io.git
+  branch: master
+  name: zwj47
+  email: 474338731@qq.com
+  message: 更新
+  
+# hexo sitemap网站地图
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+#algolia
+algolia:
+  applicationID: '6272STT30S'
+  apiKey: '8b61f125391fa88a0a6a2bab1f07b174'
+  adminApiKey: 'fadceb785e5506b837fbcab1bd60fced'
+  indexName: 'hexo'
+  chunkSize: 5000

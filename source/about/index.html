@@ -1,0 +1,342 @@
+<style>
+    #time {
+        display : block;
+        height  : 20px;
+    }
+
+    #time .myroll {
+        float     : left;
+        font-size : 18px;
+    }
+
+    #time .character {
+        float       : left;
+        font-size   : 18px;
+        height      : 20px;
+        line-height : 20px;
+    }
+</style>
+<!-- Language Selector -->
+<select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese</option>
+    <option value="1"> 英文 English</option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+
+    <!--copied from markdown -->
+    <blockquote><p>世人的愚蠢，人生的痛苦。<br>
+                   人们在这个世界上要么选择独处，要么选择庸俗，除此之外，再没有更多别的选择了。</p>
+        <p style="text-align: right">——叔本华</p></blockquote>
+    <!--<p class="article-title">About ME</p>-->
+
+    <p>Hey，我是<strong>赵伟杰</strong>，一名小前端工程师，这里有我的一些记录,和学习笔记,欢迎交流。
+    <p>在我走完318旅途，终于明确了自己真正所热衷的事，开始思考未来,并明确了以后要走的路</p>
+
+    <div id="time">
+        <div class="character">已累计运行&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div id="day" class="myroll"></div>
+        <div class="character">日</div>
+        <div id="hour" class="myroll"></div>
+        <div class="character">小时</div>
+        <div id="minute" class="myroll"></div>
+        <div class="character">分钟</div>
+        <div id="second" class="myroll"></div>
+        <div class="character">秒</div>
+    </div>
+
+    <h5>我的介绍</h5>
+
+    <ul>
+        <li>这里是记录**赵伟杰**奋斗历程的地方。</li>
+        <li>为幸福美好的生活而努力着。</li>
+        <li>在博客中记录我的学习历程,梳理我的知识,共享知识,一起交流.</li>
+    </ul>
+
+
+    <h5>最近访客</h5>
+    <ul class="ds-recent-visitors" data-num-items="30" data-avatar-size="56"></ul>
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    <blockquote>
+        <p>
+            The stupid of the world, the pain of life.
+            <br>
+            People in the world, either alone or vulgar, in addition, there is no more choice.
+        </p>
+        <p style="text-align: right">
+            --Schopenhauer
+        </p>
+    </blockquote>
+
+    <p>Hi, I am <strong>Zwj(赵伟杰)</strong>，There is my Blog.</p>
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+	// get nodes
+	var $zh = document.querySelector(".zh");
+	var $en = document.querySelector(".en");
+	var $select = document.querySelector("select");
+	// bind hashchange event
+	window.addEventListener('hashchange', _render);
+	// handle render
+	function _render() {
+		var _hash = window.location.hash;
+		// en
+		if (_hash == "#en") {
+			$select.selectedIndex = 1;
+			$en.style.display = "block";
+			$zh.style.display = "none";
+			// zh by default
+		} else {
+			// not trigger onChange, otherwise cause a loop call.
+			$select.selectedIndex = 0;
+			$zh.style.display = "block";
+			$en.style.display = "none";
+		}
+	}
+	// handle select change
+	function onLanChange(index) {
+		if (index == 0) {
+			window.location.hash = "#zh"
+		} else {
+			window.location.hash = "#en"
+		}
+	}
+	// init
+	_render();
+	//    setInterval(function () {
+	//        var time = getDifferTime.presentTime(getDifferTime.startTime(2016, 0, 18, 8, 0, 0, 0));
+	//        $("#time").html("已累计运行  " + time.day + "天 " + time.hour + "小时 " + time.minute + "分钟 " + time.second + "秒");
+	//    }, 500);
+	var getDifferTime = {
+		startTime  : function (year, month, date, hours, minute, second, millisecond) {
+			var date1 = new Date();
+			date1.setFullYear(year);
+			date1.setMonth(month);
+			date1.setDate(date);
+			date1.setHours(hours, minute, second, millisecond);
+			return date1;
+		},
+		presentTime: function (date1) {
+			var date2 = new Date();//结束时间
+			var date3 = date2.getTime() - date1.getTime(); //时间差的毫秒数
+			//计算相差年份
+			var year = Math.floor(date3 / 31536000000);
+			//计算月份
+			var month = Math.floor((date2.getMonth() + 1) - (date1.getMonth() + 1));
+			//计算出相差天数
+			var days = Math.floor(date3 / (24 * 3600 * 1000));
+			//计算出小时数
+			var leave1 = date3 % (24 * 3600 * 1000);   //计算天数后剩余的毫秒数
+			var hours = Math.floor(leave1 / (3600 * 1000));
+			//计算相差分钟数
+			var leave2 = leave1 % (3600 * 1000);      //计算小时数后剩余的毫秒数
+			var minutes = Math.floor(leave2 / (60 * 1000));
+			//计算相差秒数
+			var leave3 = leave2 % (60 * 1000);    //计算分钟数后剩余的毫秒数
+			var seconds = Math.round(leave3 / 1000);
+			return {
+				year  : year,
+				month : month,
+				day   : days,
+				hour  : hours,
+				minute: minutes,
+				second: seconds
+			}
+		}
+	};
+	/**
+	 * VERSION: 0.2.0
+	 * YZD-NewClient-Duplicate-New
+	 * Created on 2016/12/10.嘻嘻嘻~
+	 * GIT:https://github.com/zwj47
+	 *
+	 * @author: by zwj, email:zwj@zwj.space
+	 * ==============================================
+	 */
+	/**
+	 * H5数字滚动效果
+	 * @class DigitRoll
+	 * @desc 没有任何依赖, 只兼容webkit内核, 主要用于H5页面. 组件本身没有css, 如果需要修改默认样式 可以添加css样式修饰.
+	 * @param {object} opts 实例化参数
+	 * @param {string} opts.container 容器选择器 selector
+	 * @param {number} opts.width=1 数字的总宽度个数, 即要显示几位数
+	 * @example
+	 HTML:
+	 <div id="num-roll"></div>
+	 * @example
+	 js:
+	 var r1=new DigitRoll({
+        container:'#num-roll',
+        width:9
+    });
+	 */
+	function DigitRoll(opts) {
+		this.container = document.querySelector(opts.container); //容器
+		this.width = opts.width || 1;
+		if (!this.container) {
+			throw Error('no container');
+		}
+		this.container.style.overflow = 'hidden';
+		this.rollHeight = parseInt(getComputedStyle(this.container).height); //容器高度 也用于滚动间隔距离
+		if (this.rollHeight < 1) {//只有容器的高度是必选样式  如果没有设置 那就给一个默认的
+			this.container.style.height = '20px';
+			this.rollHeight = 20;
+		}
+		this.setWidth();
+	}
+	/**  @lends DigitRoll */
+	DigitRoll.prototype = {
+		/**
+		 * 滚动数字
+		 * @param {number} n 要滚动的数字
+		 * @example
+		 r1.roll(314159);
+		 //定时更新
+		 setInterval(function(){
+            r1.roll(314159);
+        },5000)
+		 */
+		roll    : function (n) {
+			var self = this;
+			this.number = parseInt(n) + '';
+			if (this.number.length < this.width) {
+				this.number = new Array(this.width - this.number.length + 1).join('0') + this.number;
+			} else if (this.number.length > this.width) {
+				this.width = this.number.length;
+				this.setWidth();
+			}
+			Array.prototype.forEach.call(this.container.querySelectorAll('.num'), function (item, i) {
+				var currentNum = parseInt(item.querySelector('div:last-child').innerHTML);//当前数字
+				var goalNum = parseInt(self.number[i]);//目标数字
+				var gapNum = 0; //数字滚动的间隔个数
+				var gapStr = '';
+				if (currentNum == goalNum) { //数字没变 不处理
+					return;
+				} else if (currentNum < goalNum) { // 比如数字从1到3
+					gapNum = goalNum - currentNum;
+					for (var j = currentNum; j < goalNum + 1; j++) {
+						gapStr += '<div>' + j + '</div>'
+					}
+				} else {// 比如 数字从6到5  因为所有情况都是从下往上滚动 所以如果是6到5的话 要滚动9个数字
+					gapNum = 10 - currentNum + goalNum;
+					for (var j = currentNum; j < 10; j++) {
+						gapStr += '<div>' + j + '</div>'
+					}
+					for (var j = 0; j < goalNum + 1; j++) {
+						gapStr += '<div>' + j + '</div>'
+					}
+				}
+				item.style.cssText += '-webkit-transition-duration:0s;-webkit-transform:translateY(0)';//重置位置
+				item.innerHTML = gapStr;
+				setTimeout(function () {
+					item.style.cssText += '-webkit-transition-duration:1s;-webkit-transform:translateY(-' + self.rollHeight * gapNum + 'px)';
+				}, 50)
+			})
+		},
+		/**
+		 * 重置宽度
+		 * @desc 一般用不到这个方法
+		 * @param {number} n 宽度 即数字位数
+		 * @example
+		 r1.setWidth(10);
+		 */
+		setWidth: function (n) {
+			n = n || this.width;
+			var str = '';
+			for (var i = 0; i < n; i++) {
+				str += '<div class="num" style="float:left;height:100%;line-height:' + this.rollHeight + 'px"><div>0</div></div>';
+			}
+			this.container.innerHTML = str;
+		}
+	}
+	//倒计时;
+	var day = new DigitRoll({
+		container: '#day',
+	});
+	var hour = new DigitRoll({
+		container: '#hour',
+	});
+	var minute = new DigitRoll({
+		container: '#minute',
+	});
+	var second = new DigitRoll({
+		container: '#second',
+	});
+	setInterval(function () {
+		var time = getDifferTime.presentTime(getDifferTime.startTime(2016, 0, 18, 8, 0, 0, 0));
+//    $("#time").html("已累计运行  " + time.day + "天 " + time.hour + "小时 " + time.minute + "分钟 " + time.second + "秒");
+		day.roll(time.day);
+		hour.roll(time.hour);
+		minute.roll(time.minute);
+		second.roll(time.second);
+	}, 500);
+</script>
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<div class="comment">
+    <div class="ds-thread"
+         data-thread-key="{{site.duoshuo_username}}/about/"
+         data-title="about"
+         data-url="{{site.url}}/about/">
+    </div>
+</div>
+<!-- 多说评论框 end -->
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+	// dynamic User hacking by Hux
+	var _user = '{{site.duoshuo_username}}';
+	// duoshuo comment query.
+	var duoshuoQuery = {short_name: _user};
+	(function () {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';
+		ds.async = true;
+//        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.src = 'http://resource.zwjay.cn/embed.min.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+	const disqus_config = function () {
+		this.page.url = "{{site.url}}{{page.url}}";  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = "{{page.id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	};
+	let disqus_username = "{{site.disqus_username}}";
+	(function () { // DON'T EDIT BELOW THIS LINE
+		let d = document, s = d.createElement('script');
+		s.src = '//' + disqus_username + '.disqus.com/embed.js';
+//		s.src = '//resource.zwjay.cn/jekyll/js/disqus.embed.js';
+		s.type = 'text/javascript';
+		s.async = true;
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered byDisqus.</a>
+</noscript>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
