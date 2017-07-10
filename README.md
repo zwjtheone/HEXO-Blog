@@ -1,6 +1,6 @@
 hexo# [赵伟杰的技术博客](http://zwjay.cn)
 
-<!-- 
+
 ### 发布三部曲
 
 >  * hexo g    // 生成文章
@@ -10,6 +10,8 @@ hexo# [赵伟杰的技术博客](http://zwjay.cn)
 
 如果`hexo d` 没有发布上去的时候，最好把public 文件夹删除再运行一下,然后再运行`hexo d`
 
+
+<!-- 
 ## 提交百度seo
 在source目录下输入：
 curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=meiminjun.github.io&token=qdkA29iGaFLKdAFv" 
