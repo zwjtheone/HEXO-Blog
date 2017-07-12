@@ -83,10 +83,9 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/zwj47/zwj47.github.io.git
-  branch: master
-  name: zwj47
-  email: 474338731@qq.com
+  repo:
+    #github: https://git@github.com:zwj47/zwj47.github.io.git
+    coding: https://git.coding.net/zwjay/zwjay-jekyll.git
   message: 更新
   
 # hexo sitemap网站地图
