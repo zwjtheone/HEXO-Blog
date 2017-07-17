@@ -14,8 +14,8 @@ keywords: "赵伟杰, zwj赵伟杰, zwj, 赵伟杰的博客, zwj Blog, 博客, �
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.zwjay.cn/
-root: /
+url: https://zwjay.coding.me/zwjay-jekyll/
+root: /zwjay-jekyll/
 # permalink: :year/:month/:day/:title/
 permalink: :title/
 permalink_defaults:

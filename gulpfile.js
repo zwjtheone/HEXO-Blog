@@ -60,7 +60,7 @@ gulp.task('minify-html', function() {
 });
 // 压缩public目录下的所有js
 gulp.task('minify-js', function() {
-	return gulp.src('./public/**/*.js')
+	return gulp.src('./public/js/*.js')
 	.pipe(uglify())
 	.pipe(gulp.dest('./public'));
 });
@@ -84,6 +84,9 @@ gulp.task('minify-img-aggressive', function() {
 // 用run-sequence并发执行，同时处理html，css，js，img
 gulp.task('compress', function(cb) {
 	runSequence(['minify-html', 'minify-css', 'minify-js', 'minify-img-aggressive'], cb);
+});
+gulp.task('ys', function(cb) {
+	runSequence(['minify-html', 'minify-css', 'minify-js'], cb);
 });
 // 执行顺序： 清除public目录 -> 产生原始博客内容 -> 执行压缩混淆
 gulp.task('build', function(cb) {
