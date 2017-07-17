@@ -3,21 +3,8 @@ date: 2017/7/17 11:51
 updated: 2017/7/17 11:51
 ---
 
-# 手机类型判断
+# 返回字符串长度，汉字计数为2
 
-```javascript
-var BrowserInfo = {
-userAgent: navigator.userAgent.toLowerCase()
-isAndroid: Boolean(navigator.userAgent.match(/android/ig)),
-isIphone: Boolean(navigator.userAgent.match(/iphone|ipod/ig)),
-isIpad: Boolean(navigator.userAgent.match(/ipad/ig)),
-isWeixin: Boolean(navigator.userAgent.match(/MicroMessenger/ig)),
-}
-```
-
-
-
-# 返回字符串长度，汉子计数为2
 ```javascript
 function strLength(str) {
 var a = 0;
@@ -31,7 +18,7 @@ return a;
 }
 ```
 
-
+<!--more-->
 
 # 获取url中的参数
 ```javascript
@@ -195,35 +182,44 @@ function selectAll(objSelect) {
        }
    }
    ```
-# js判断浏览器
+   
+   
+# 操作系统
 ```javascript
+var browser = {
+	versions: function () {
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {//移动终端浏览器版本信息
+			dingTalk: u.indexOf("DingTalk") > -1,
+			weibo: u.indexOf("weibo") > -1,
+			qq: u.indexOf("QQ/") > -1,
+			qqBrowser: u.indexOf("MQQBrowser") > -1,
+			weChat: u.indexOf("MicroMessenger") > -1,
+			trident: u.indexOf("Trident") > -1,
+			presto: u.indexOf("Presto") > -1,
+			webKit: u.indexOf("AppleWebKit") > -1,
+			gecko: u.indexOf("Gecko") > -1 && u.indexOf("KHTML") == -1,
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/Windows Phone/) || !!u.match(/Android/) || !!u.match(/MQQBrowser/),
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+			android: u.indexOf("Android") > -1 || u.indexOf("Linux") > -1,
+			iPhone: u.indexOf("iPhone") > -1 || u.indexOf("Mac") > -1,
+			iPad: u.indexOf("iPad") > -1,
+			webApp: u.indexOf("Safari") == -1
+		};
+	}(),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+```
+# 手机类型判断
 
-
-//判断是否是 IE 浏览器
-if (document.all){
-   alert(”IE浏览器”);
-}else{
-   alert(”非IE浏览器”);
+```javascript
+var BrowserInfo = {
+	userAgent: navigator.userAgent.toLowerCase(),
+	isAndroid: Boolean(navigator.userAgent.match(/android/ig)),
+	isIphone: Boolean(navigator.userAgent.match(/iphone|ipod/ig)),
+	isIpad: Boolean(navigator.userAgent.match(/ipad/ig)),
+	isWeixin: Boolean(navigator.userAgent.match(/MicroMessenger/ig))
 }
-if (!!window.ActiveXObject){
-   alert(”IE浏览器”);
-}else{
-   alert(”非IE浏览器”);
-}
-//判断是IE几
-var isIE=!!window.ActiveXObject;
-var isIE6=isIE&&!window.XMLHttpRequest;
-var isIE8=isIE&&!!document.documentMode;
-var isIE7=isIE&&!isIE6&&!isIE8;
-if (isIE){
-if (isIE6){
-   alert(”ie6″);
-}else if (isIE8){
-   alert(”ie8″);
-}else if (isIE7){
-   alert(”ie7″);
-}
-}　　
 ```
 # 判断浏览器
 ```javascript

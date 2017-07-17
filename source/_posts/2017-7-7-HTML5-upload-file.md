@@ -4,11 +4,11 @@ updated: 2017/7/7 10:10
 ---
 
 
-#DOM
+# DOM
 ```
 <input type="file" id="file">
 ```
-#一、创建FormData放入待上传文件
+# 一、创建FormData放入待上传文件
 ```
 //准备FormData对象
 var formData = new FormData(),
@@ -17,7 +17,9 @@ var formData = new FormData(),
 //将文件放入FormData对象中    
 formData.append('file', uploadFile.files[0]);
 ```
-#二、通过xhr发送FormData数据到服务器，实现文件上传
+<!--more-->
+
+# 二、通过xhr发送FormData数据到服务器，实现文件上传
 ```
 //创建xhr对象
 var xhr = new XMLHttpRequest();
