@@ -1,19 +1,11 @@
----	
 title: JavaScript常用方法总结
 date: 2017/7/17 11:51
 updated: 2017/7/17 11:51
-layout: post
-author: zwjtheone
-catalog: true
-categories: 
-tags:
-- JavaScript
-
-#permalink:	覆盖文章网址	
 ---
 
-# 1.手机类型判断
+# 手机类型判断
 
+```javascript
 var BrowserInfo = {
 userAgent: navigator.userAgent.toLowerCase()
 isAndroid: Boolean(navigator.userAgent.match(/android/ig)),
@@ -21,10 +13,12 @@ isIphone: Boolean(navigator.userAgent.match(/iphone|ipod/ig)),
 isIpad: Boolean(navigator.userAgent.match(/ipad/ig)),
 isWeixin: Boolean(navigator.userAgent.match(/MicroMessenger/ig)),
 }
+```
 
 
-# 2.返回字符串长度，汉子计数为2
 
+# 返回字符串长度，汉子计数为2
+```javascript
 function strLength(str) {
 var a = 0;
 for (var i = 0; i < str.length; i++) {
@@ -35,18 +29,22 @@ for (var i = 0; i < str.length; i++) {
 }
 return a;
 }
+```
 
 
-# 3.获取url中的参数
 
+# 获取url中的参数
+```javascript
 function GetQueryStringRegExp(name,url) {
 var reg = new RegExp("(^|\?|&)" + name + "=([^&]*)(\s|&|$)", "i");
 if (reg.test(url)) return decodeURIComponent(RegExp.$2.replace(/+/g, " ")); return "";
 }　
+```
 
 
-# 4.js绑定事件适用于任何浏览器的元素绑定
 
+# js绑定事件适用于任何浏览器的元素绑定
+```javascript
 function eventBind(obj, eventType, callBack) {
   if (obj.addEventListener) {
       obj.addEventListener(eventType, callBack, false);
@@ -59,10 +57,12 @@ function eventBind(obj, eventType, callBack) {
   }
 };
 eventBind(document, 'click', bodyClick);
+```
 
 
-# 5.获得当前浏览器JS的版本
 
+# 获得当前浏览器JS的版本
+```javascript
 function getjsversion(){
 var n = navigator;
 var u = n.userAgent;
@@ -108,9 +108,10 @@ if (String && String.prototype) {
 }
 return javascriptVersion;
 }　　
+```
 
-
-# 6.获取当前点击事件的Object对象
+# 获取当前点击事件的Object对象
+```javascript
 
 function getEvent() {
 if (document.all) {
@@ -130,8 +131,11 @@ while (func != null) {
 return null;
 };　
 
+```
 
-# 7.字符串截取方法
+# 字符串截取方法
+```javascript
+
 
 getCharactersLen: function (charStr, cutCount) {
    if (charStr == null || charStr == '') return '';
@@ -154,9 +158,11 @@ getCharactersLen: function (charStr, cutCount) {
    }
    return newStr;
 }　　
+```
 
+# JS弹出新窗口全屏
+```javascript
 
-# 8.JS弹出新窗口全屏
 
 var tmp = window.open("about:blank", "", "fullscreen=1")
                        tmp.moveTo(0, 0);
@@ -172,9 +178,11 @@ var f = document.createElement("form");
                        f.target = '_blank';
                        document.body.appendChild(f);
                        f.submit();　
+```
 
+# 全选/全不选
+```javascript
 
-# 9. 全选/全不选
 
 function selectAll(objSelect) {
        if (objSelect.checked == true) {
@@ -186,10 +194,12 @@ function selectAll(objSelect) {
            $("input[name='chkAll']").attr("checked", false);
        }
    }
-   
-# 10. js判断浏览器
+   ```
+# js判断浏览器
+```javascript
 
-判断是否是 IE 浏览器
+
+//判断是否是 IE 浏览器
 if (document.all){
    alert(”IE浏览器”);
 }else{
@@ -200,7 +210,7 @@ if (!!window.ActiveXObject){
 }else{
    alert(”非IE浏览器”);
 }
-判断是IE几
+//判断是IE几
 var isIE=!!window.ActiveXObject;
 var isIE6=isIE&&!window.XMLHttpRequest;
 var isIE8=isIE&&!!document.documentMode;
@@ -214,8 +224,9 @@ if (isIE6){
    alert(”ie7″);
 }
 }　　
-# 11.判断浏览器
-
+```
+# 判断浏览器
+```javascript
 function getOs() {
 if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
    return "MSIE8";
@@ -236,9 +247,9 @@ else {
    return "Other";
 }
 }
-
-# 12.JS判断两个日期大小 适合 2012-09-09 与2012-9-9 两种格式的对比
-
+```
+# JS判断两个日期大小 适合 2012-09-09 与2012-9-9 两种格式的对比
+```javascript
 //得到日期值并转化成日期格式，replace(/-/g, "/")是根据验证表达式把日期转化成长日期格式，这样再进行判断就好判断了
    function ValidateDate() {
        var beginDate = $("#t_datestart").val();
@@ -252,7 +263,11 @@ else {
            }
        }
    }　
-# 13.移除事件
+   ```
+
+# 移除事件
+```javascript
+
 
 this.moveBind = function (objId, eventType, callBack) {
 var obj = document.getElementById(objId);
@@ -266,8 +281,10 @@ else {
    obj['on' + eventType] = null;
 }
 }　
+```
+# 回车提交
+```javascript
 
-# 14.回车提交
 
 $("id").onkeypress = function (event) {
 event = (event) ? event : ((window.event) ? window.event : "")
@@ -276,12 +293,18 @@ if (keyCode == 13) {
    $("SubmitLogin").onclick();
 }
 }
-# 15.JS 执行计时器
+```
+# JS 执行计时器
+```javascript
+
 
 timeStart = new Date().getTime();
 timesEnd = new Date().getTime();
 document.getElementById("time").innerHTML = timesEnd - timeStart;
-# 16.JS 写Cookie
+```
+# JS 写Cookie
+```javascript
+
 
 function setCookie(name, value, expires, path, domain) {
 if (!expires) expires = -1;
@@ -309,8 +332,10 @@ else {
 }
 document.cookie = name + "=" + value + ";path=" + path + e + dm;
 };　　
+```
+# JS读Cookie
+```javascript
 
-# 17. JS读Cookie
 
 function readCookie(name) {
 var nameEQ = name + "=";
@@ -323,7 +348,9 @@ for (var i = 0; i < ca.length; i++) {
    }
 } return null
 }
-# 18. Ajax请求
+```
+# Ajax请求
+```javascript
 
 C.ajax = function (args) {
 var self = this;
@@ -385,8 +412,10 @@ this.send = function () {
 };
 this.send();
 };　　
+```
 
-# 19. JS StringBuilder 用法
+# JS StringBuilder 用法
+```javascript
 
 function StringBuilder() {
 this.strings = new Array;
@@ -398,8 +427,10 @@ StringBuilder.prototype.toString = function () {
 return this.strings.join('');
 };
 
+```
 
-# 20. JS加载到顶部LoadJS
+# JS加载到顶部LoadJS
+```javascript
 
 function loadJS (url, fn) {
    var ss = document.getElementsByName('script'),
@@ -425,7 +456,7 @@ function loadJS (url, fn) {
        }
    };
    document.getElementsByTagName('head')[0].appendChild(s);
-},
+}
 bind: function (objId, eventType, callBack) {  //适用于任何浏览器的绑定
    var obj = document.getElementById(objId);
    if (obj.addEventListener) {
@@ -454,7 +485,10 @@ function JSLoad (args) {
    };
    document.getElementsByTagName("head")[0].appendChild(s);
 }　　
-# 21.清空LoadJS加载到顶部的js引用
+```
+
+# 清空LoadJS加载到顶部的js引用
+```javascript
 
 function ClearHeadJs  (src) {
    var js = document.getElementsByTagName('head')[0].children;
@@ -465,14 +499,19 @@ function ClearHeadJs  (src) {
        }
    }
    document.getElementsByTagName('head')[0].removeChild(obj);
-};　　
+}
+```
 
-# 22. JS替换非法字符主要用在密码验证上出现的特殊字符
+# JS替换非法字符主要用在密码验证上出现的特殊字符
+```javascript
 
 function URLencode(sStr) {
 return escape(sStr).replace(/+/g, '%2B').replace(/"/g, '%22').replace(/'/g, '%27').replace(///g, '%2F');
 };　
-# 23. 按Ctrl + Entert 直接提交表单
+```
+
+# 按Ctrl + Entert 直接提交表单
+```javascript
 
 document.body.onkeydown = function (evt) {
 evt = evt ? evt : (window.event ? window.event : null);
@@ -483,8 +522,10 @@ if (13 == evt.keyCode && evt.ctrlKey) {
    PostData();
 }
 };　
+```
 
-# 24.获取当前时间
+# 获取当前时间
+```javascript
 
 function GetCurrentDate() {
    var d = new Date();
@@ -501,7 +542,10 @@ function add_zero(temp) {
    if (temp < 10) return "0" + temp;
    else return temp;
 }
-# 25. Js去掉空格方法
+```
+
+# Js去掉空格方法
+```javascript
 
 String.prototype.Trim = function()
 { return this.replace(/(^s*)|(s*$)/g, ""); }
@@ -509,8 +553,10 @@ String.prototype.LTrim = function()
 {return this.replace(/(^s*)/g, "");}
 String.prototype.RTrim = function()
 {return this.replace(/(s*$)/g, "");}　
+```
 
-# 26. Js动态移除head里的js引用
+# Js动态移除head里的js引用
+```javascript
 
 this.ClearHeadJs = function (src) {
 var js = document.getElementsByTagName('head')[0].children;
@@ -523,8 +569,10 @@ for (var i = 0; i < js.length; i++) {
 document.getElementsByTagName('head')[0].removeChild(obj);
 };　
 
+```
 
-# 27.整个UL点击事件 加在UL里的onclick里
+# 整个UL点击事件 加在UL里的onclick里
+```javascript
 
 function CreateFrom(url, params) {
 var f = document.createElement("form");
@@ -540,8 +588,10 @@ f.target = "_blank";
 document.body.appendChild(f);
 f.submit();
 };
-# 28. 判断浏览器使用的是哪个 JS 版本
+```
 
+# 判断浏览器使用的是哪个 JS 版本
+```javascript
 <script language="javascript">
  var jsversion = 1.0;
 </script>
@@ -576,3 +626,84 @@ f.submit();
  jsversion = 2.0;
 </script>
 alert(jsversion);
+```
+# 动态加载js脚本文件
+```javascript
+
+function async(src, callBack) {
+	var $body = document.body;
+	var EleScript = document.createElement("script");
+	EleScript.src = src;
+	$body.appendChild(EleScript);
+	if (callBack) {
+		EleScript.addEventListener('load', function (e) {
+			callBack(null, e);
+		}, false);
+	}
+	$body.appendChild(EleScript);
+}
+```
+# 手机分享页唤起APP
+```javascript
+//操作系统
+var browser = {
+	versions: function () {
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {//移动终端浏览器版本信息
+			dingTalk: u.indexOf("DingTalk") > -1,
+			weibo: u.indexOf("weibo") > -1,
+			qq: u.indexOf("QQ/") > -1,
+			qqBrowser: u.indexOf("MQQBrowser") > -1,
+			weChat: u.indexOf("MicroMessenger") > -1,
+			trident: u.indexOf("Trident") > -1,
+			presto: u.indexOf("Presto") > -1,
+			webKit: u.indexOf("AppleWebKit") > -1,
+			gecko: u.indexOf("Gecko") > -1 && u.indexOf("KHTML") == -1,
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/Windows Phone/) || !!u.match(/Android/) || !!u.match(/MQQBrowser/),
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+			android: u.indexOf("Android") > -1 || u.indexOf("Linux") > -1,
+			iPhone: u.indexOf("iPhone") > -1 || u.indexOf("Mac") > -1,
+			iPad: u.indexOf("iPad") > -1,
+			webApp: u.indexOf("Safari") == -1
+		};
+	}(),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+function OpenApp() {
+	if (!IsPC()) {
+		if (browser.versions.weChat || browser.versions.qq || browser.versions.dingTalk || browser.versions.weibo) {
+			ShowGuide();
+			if (browser.versions.ios) {
+				ShowIosGuide();
+			} else {
+				ShowAdrGuide();
+			}
+		} else {
+			//打开APP
+			if (navigator.onLine) {
+				//'&usr=' + getURLParameter("openid") +
+				window.location.href = "fivekilometres://articleDetail?id=" + getURLParameter("articleId") + "&type=" + localStorage.getItem("contentType") + "&sharer=" + getURLParameter("sharer");
+				setTimeout(function () {
+					// alert("即将上线，敬请期待");
+					setTimeout(function () {
+						download();
+					}, 2000);
+				}, 3000);
+			} else {
+				alert("请查看您的网络链接");
+			}
+			//如果打开APP超时就提示用户下载
+		}
+	} else {
+		download();
+	}
+}
+```
+# 获取URL参数
+```javascript
+function getURLParameter(name) {
+	return decodeURIComponent(( new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(location.search) || [, ""])[1].replace(/\+/g, "%20")) || null;
+}
+// 用法
+getURLParameter('params');
+```
