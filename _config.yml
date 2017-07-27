@@ -14,8 +14,8 @@ keywords: "赵伟杰, zwj赵伟杰, zwj, 赵伟杰的博客, zwj Blog, 博客, �
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zwjay.coding.me/zwjay-jekyll/
-root: /zwjay-jekyll/
+url: https://www.zwjay.cn
+root: /
 # permalink: :year/:month/:day/:title/
 permalink: :title/
 permalink_defaults:
@@ -76,15 +76,16 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
+plugins: hexo-deployer-git
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: indigo
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo:
-    #github: https://git@github.com:zwj47/zwj47.github.io.git
+    github: https://git@github.com:zwj47/zwj47.github.io.git
     coding: https://git.coding.net/zwjay/zwjay-jekyll.git
   message: 更新
   
