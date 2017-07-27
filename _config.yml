@@ -85,7 +85,7 @@ theme: indigo
 deploy:
   type: git
   repo:
-    github: https://git@github.com:zwj47/zwj47.github.io.git
+    github: https://github.com/zwj47/zwj47.github.io.git
     coding: https://git.coding.net/zwjay/zwjay-jekyll.git
   message: 更新
   
