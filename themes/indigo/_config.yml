@@ -14,7 +14,7 @@ menu:
   archives:
     url: /archives
   tags:
-    url: /tag
+    url: /tags
 #  th-list:
 #    text: Categories
 #    url: /categories

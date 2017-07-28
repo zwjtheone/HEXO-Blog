@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.7"
+    "version": "3.3.8"
   },
   "dependencies": {
     "del": "^3.0.0",
@@ -35,5 +35,8 @@
     "minimatch": "^3.0.4",
     "run-sequence": "^2.0.0",
     "uglify": "^0.1.5"
+  },
+  "devDependencies": {
+    "gulp-htmlmin": "^3.0.0"
   }
 }

@@ -3,7 +3,7 @@ date: 2017/7/7 9:25
 updated: 2017/7/7 9:30
 tags:
 	- JavaScript
-	- 模块化
+	- Module
 ---
 
 ![](https://ww2.sinaimg.cn/large/006tKfTcgy1fh7u9d2ixbj308c08bdfs.jpg)
