@@ -1,6 +1,10 @@
 title: HEXO 部署Git的坑
 date: 2016-1-20 20:08:08
 updated: 2016-11-30 20:08:08
+tags:
+	- HEXO
+categories:
+  - Test
 ---
 
 # 部署Git 第一步配置config.yml 文件

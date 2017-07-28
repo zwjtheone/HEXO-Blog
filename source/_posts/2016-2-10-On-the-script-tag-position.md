@@ -1,6 +1,8 @@
 title: 关于script标签位置
 date: 2016-2-10 20:08:08
 updated: 2016-11-30 21:10:08
+tags:
+	- JavaScript
 ---
 
 

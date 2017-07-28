@@ -1,6 +1,9 @@
 title: 基于AngularJS/Ionic框架开发的性能优化
 date: 2016-11-30 12:31:00
 updated: 2016-11-30 14:31:00
+tags:
+	- Ionic
+	- Angular
 ---
 
 

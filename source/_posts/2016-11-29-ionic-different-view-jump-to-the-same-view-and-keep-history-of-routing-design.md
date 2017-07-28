@@ -1,6 +1,8 @@
 title: ionic不同view跳转到同一个view并保留历史的路由设计
 date: 2016-11-29 07:08:08
 updated: 2016-11-30 01:08:08
+tags:
+	- Ionic
 ---
 
 

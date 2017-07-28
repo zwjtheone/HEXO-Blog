@@ -9,18 +9,18 @@
 #    target: _blank    是否跳出，省略则在当前页面打开
 menu:
   home:
-    text: 主页
+    text: Home
     url: /
   archives:
     url: /archives
-#  tags:
-#    url: /tags
+  tags:
+    url: /tag
 #  th-list:
 #    text: Categories
 #    url: /categories
   grav:
     link: grav
-    text: 关于我
+    text: About
     url: /about
   github:
     url: https://github.com/zwj47

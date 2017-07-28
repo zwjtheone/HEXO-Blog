@@ -1,6 +1,8 @@
 title: ionic 跳转（进入）二级页面隐藏Tab，无再进入第三季页面，TAB出现BUG
 date: 2016-11-29 20:08:08
 updated: 2016-11-30 20:08:08
+tags:
+	- Ionic
 ---
 
 # 1.ion-view

@@ -1,6 +1,8 @@
 title: ionic工具类API和配置
 date: 2016-11-29 20:08:08
 updated: 2016-11-30 20:08:08
+tags:
+	- Ionic
 ---
 
 

@@ -1,6 +1,9 @@
 title: Ruby gems更换source的时候 certificate verify failed
 date: 2016-11-30 10:01:08
 update: 2016-11-30 10:08:08
+tags:
+	- Ruby
+	- Sass
 ---
 
 
