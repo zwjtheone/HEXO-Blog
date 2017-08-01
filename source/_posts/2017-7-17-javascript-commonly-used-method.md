@@ -569,62 +569,6 @@ document.getElementsByTagName('head')[0].removeChild(obj);
 
 ```
 
-# 整个UL点击事件 加在UL里的onclick里
-```javascript
-
-function CreateFrom(url, params) {
-var f = document.createElement("form");
-f.setAttribute("action", url);
-for (var i = 0; i < params.length; i++) {
-    var input = document.createElement("input");
-    input.setAttribute("type", "hidden");
-    input.setAttribute("name", params[i].paramName);
-    input.setAttribute("value", params[i].paramValue);
-    f.appendChild(input);
-}
-f.target = "_blank";
-document.body.appendChild(f);
-f.submit();
-};
-```
-
-# 判断浏览器使用的是哪个 JS 版本
-```javascript
-<script language="javascript">
- var jsversion = 1.0;
-</script>
-<script language="javascript1.1">
- jsversion = 1.1;
-</script>
-<script language="javascript1.2">
- jsversion = 1.2;
-</script>
-<script language="javascript1.3">
- jsversion = 1.3;
-</script>
-<script language="javascript1.4">
- jsversion = 1.4;
-</script>
-<script language="javascript1.5">
- jsversion = 1.5;
-</script>
-<script language="javascript1.6">
- jsversion = 1.6;
-</script>
-<script language="javascript1.7">
- jsversion = 1.7;
-</script>
-<script language="javascript1.8">
- jsversion = 1.8;
-</script>
-<script language="javascript1.9">
- jsversion = 1.9;
-</script>
-<script language="javascript2.0">
- jsversion = 2.0;
-</script>
-alert(jsversion);
-```
 # 动态加载js脚本文件
 ```javascript
 
@@ -696,12 +640,4 @@ function OpenApp() {
 		download();
 	}
 }
-```
-# 获取URL参数
-```javascript
-function getURLParameter(name) {
-	return decodeURIComponent(( new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(location.search) || [, ""])[1].replace(/\+/g, "%20")) || null;
-}
-// 用法
-getURLParameter('params');
 ```
