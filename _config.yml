@@ -43,7 +43,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: true
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -85,10 +85,9 @@ theme: indigo
 deploy:
   type: git
   repo:
-    github: https://github.com/zwj47/zwj47.github.io.git
-    coding: https://git.coding.net/zwjay/zwjay-jekyll.git
+    github: git@github.com:zwjtheone/zwjtheone.github.io.git
   message: 更新
-  
+
 # hexo sitemap网站地图
 sitemap:
   path: sitemap.xml
@@ -97,8 +96,47 @@ baidusitemap:
 
 #algolia
 algolia:
-  applicationID: '6272STT30S'
+  applicationID: '6272STT3s0S'
   apiKey: '8b61f125391fa88a0a6a2bab1f07b174'
   adminApiKey: 'fadceb785e5506b837fbcab1bd60fced'
   indexName: 'hexo'
   chunkSize: 5000
+
+#feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: false
+
+html_minifier:
+  minifyJS: true
+  removeComments: true
+  collapseWhitespace: true
+  collapseBooleanAttributes: true
+  removeEmptyAttributes: true
+  removeScriptTypeAttributes: true
+  removeStyleLinkTypeAttributes: true
