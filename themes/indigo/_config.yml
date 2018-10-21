@@ -37,7 +37,7 @@ avatar_link: /
 # 头像背景图
 brand: /img/brand.jpg
 # favicon
-favicon: http://resource.zwjay.cn/jekyll/img/favicon.ico
+favicon: /img/favicon.ico
 
 # email
 email: zwjtheone@vip.qq.com
