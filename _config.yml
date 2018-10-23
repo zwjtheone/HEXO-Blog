@@ -86,7 +86,6 @@ deploy:
   type: git
   repo:
     github: git@github.com:zwjtheone/zwjtheone.github.io.git
-  message: update
 
 # hexo sitemap网站地图
 sitemap:
