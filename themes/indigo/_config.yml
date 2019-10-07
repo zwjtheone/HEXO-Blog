@@ -93,7 +93,7 @@ baidu_tongji: 3bb52bac3a1a7769395d128d17051281
 tajs: false
 
 # google
-google_analytics: false
+google_analytics: UA-72731214-1
 google_site_verification: false
 
 # sogou站长验证 http://zhanzhang.sogou.com/
@@ -145,7 +145,7 @@ canonical: http://www.zwjay.cn
 since_year: 2016
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: 前端 | 赵伟杰，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Zwj赵伟杰 的个人博客，与你一起发现更大的世界。
+about: 前端 | Jaxson，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Jaxson 的个人博客，与你一起发现更大的世界。
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:

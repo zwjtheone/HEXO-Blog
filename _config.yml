@@ -3,14 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ZWJ'Blog
+title: Jaxson'Blog
 subtitle: 凡悟道，必踩坑
-description: 前端 | 赵伟杰，Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Zwj赵伟杰 的个人博客，与你一起发现更大的世界。
-author: Mr.Jay
+description: 前端 | Jaxson, Web & Mobile Lover，Front-End Engineer，UX Designer | 这里是 @Jaxson 的个人博客，与你一起发现更大的世界。
+author: Mr.Jaxson
 language: zh-Hans
 timezone:
 email: zwjtheone@vip.qq.com
-keywords: "赵伟杰, zwj赵伟杰, zwj, 赵伟杰的博客, zwj Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, zwjtheone, zwjay, zwj47, 黄思棋的男朋友"
+keywords: "Jaxson, Jaxson Blog, 博客, 个人网站, 互联网, 前端, 设计, 产品, zwjtheone, zwjay, zwj47, 黄思棋的男朋友"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
