@@ -1,4 +1,4 @@
-hexo# [赵伟杰的技术博客](http://zwjay.cn)
+hexo# [Jaxson的技术博客](http://zwjay.cn)
 
 
 ### 发布三部曲
