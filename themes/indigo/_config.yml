@@ -9,7 +9,7 @@
 #    target: _blank    是否跳出，省略则在当前页面打开
 menu:
   home:
-    text: Home
+    text: 主页
     url: /
   archives:
     url: /archives
@@ -29,9 +29,15 @@ menu:
 #    url: https://coding.net/u/zwjay
 #    text: Coding
 #    target: _blank
+#  weibo:
+#    url: http://www.weibo.com/ysweb
+#    target: _blank
+#  link:
+#    text: 测试
+#    url: /custom
 
 # 你的头像url
-avatar: http://img.zwjay.cn/gougou-avatar.png
+avatar: /img/avatar.jpg
 # avatar link
 avatar_link: /
 # 头像背景图
@@ -40,7 +46,7 @@ brand: /img/brand.jpg
 favicon: /img/favicon.ico
 
 # email
-email: zwjtheone@vip.qq.com
+email: 634206017@qq.com
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
@@ -103,7 +109,7 @@ sogou_site_verification: false
 less:
   compress: true
   paths:
-  - source/css/style.less
+    - source/css/style.less
 
 # 以下评论插件开启一个即可
 # 是否开启 disqus
@@ -117,6 +123,13 @@ gitment: false
 #   repo:
 #   client_id:
 #   client_secret:
+
+# use gitalk://github.com/gitalk/gitalk
+gitalk: false
+#  owner:
+#  repo:
+#  client_id:
+#  client_secret:
 
 # Valine Comment system. https://valine.js.org
 valine:
