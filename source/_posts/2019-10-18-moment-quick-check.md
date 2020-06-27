@@ -1,5 +1,5 @@
 ---
-title: 2019-10-18-moment-quick-check 
+title: moment-quick-check 
 date: 2019/10/18 21:40 
 updated: 2019/10/18 21:40 
 tags: 
