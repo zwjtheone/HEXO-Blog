@@ -29,6 +29,12 @@ menu:
 #    url: https://coding.net/u/zwjay
 #    text: Coding
 #    target: _blank
+#  weibo:
+#    url: http://www.weibo.com/ysweb
+#    target: _blank
+#  link:
+#    text: 测试
+#    url: /custom
 
 # 你的头像url
 avatar: /img/avatara.jpg
@@ -103,7 +109,7 @@ sogou_site_verification: false
 less:
   compress: true
   paths:
-  - source/css/style.less
+    - source/css/style.less
 
 # 以下评论插件开启一个即可
 # 是否开启 disqus
@@ -117,6 +123,13 @@ gitment: false
 #   repo:
 #   client_id:
 #   client_secret:
+
+# use gitalk://github.com/gitalk/gitalk
+gitalk: false
+#  owner:
+#  repo:
+#  client_id:
+#  client_secret:
 
 # Valine Comment system. https://valine.js.org
 valine:
